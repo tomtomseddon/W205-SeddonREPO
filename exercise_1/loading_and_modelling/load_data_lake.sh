@@ -81,26 +81,31 @@ tail -n +2 "$OLD_FILE4" > $NEW_FILE4
 echo "processing $OLD_FILE5..."
 tail -n +2 "$OLD_FILE5" > $NEW_FILE5
 
-# Now create the HDFS directory
+# Now create the HDFS directories needed
 
 hdfs dfs -mkdir /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/hospitals
+hdfs dfs -mkdir /user/w205/hospital_compare/effective_care
+hdfs dfs -mkdir /user/w205/hospital_compare/readmissions
+hdfs dfs -mkdir /user/w205/hospital_compare/measures
+hdfs dfs -mkdir /user/w205/hospital_compare/survey_responses
 
-# Put each of the new files into hdfs
+# Put each of the new files into hdfs in the right directory
 
 echo "adding $NEW_FILE1 to hdfs..."
-hdfs dfs -put $NEW_FILE1 /user/w205/hospital_compare
+hdfs dfs -put $NEW_FILE1 /user/w205/hospital_compare/hospitals
 
 echo "adding $NEW_FILE2 to hdfs..."
-hdfs dfs -put $NEW_FILE2 /user/w205/hospital_compare
+hdfs dfs -put $NEW_FILE2 /user/w205/hospital_compare/effective_care
 
 echo "adding $NEW_FILE3 to hdfs..."
-hdfs dfs -put $NEW_FILE3 /user/w205/hospital_compare
+hdfs dfs -put $NEW_FILE3 /user/w205/hospital_compare/readmissions
 
 echo "adding $NEW_FILE4 to hdfs..."
-hdfs dfs -put $NEW_FILE4 /user/w205/hospital_compare
+hdfs dfs -put $NEW_FILE4 /user/w205/hospital_compare/measures
 
 echo "adding $NEW_FILE5 to hdfs..."
-hdfs dfs -put $NEW_FILE5 /user/w205/hospital_compare
+hdfs dfs -put $NEW_FILE5 /user/w205/hospital_compare/survey_responses
 
 # change directory back to original working directory when script started
 
