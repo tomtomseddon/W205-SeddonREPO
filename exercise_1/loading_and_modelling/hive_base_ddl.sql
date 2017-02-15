@@ -201,5 +201,71 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/measures';
 
-
-
+-- Safety information file
+DROP TABLE safety_schema;
+CREATE EXTERNAL TABLE safety_schema
+(provider_id string,
+hospital_name string,
+address string,
+city string,
+state string,
+zip string,
+county string,
+PSI_90_threshold string,
+PSI_90_benchmark string,
+PSI_90_baseline string,
+PSI_90_performance string,
+PSI_90_achieve_pts string,
+PSI_90_improve_pts string,
+PSI_90_score string,
+HAI_1_threshold string,
+HAI_1_benchmark string,
+HAI_1_baseline string,
+HAI_1_performance string,
+HAI_1_achieve_pts string,
+HAI_1_improve_pts string,
+HAI_1_score string,
+HAI_2_threshold string,
+HAI_2_benchmark string,
+HAI_2_baseline string,
+HAI_2_performance string,
+HAI_2_achieve_pts string,
+HAI_2_improve_pts string,
+HAI_2_score string,
+SSI_combined_score string,
+HAI_3_threshold string,
+HAI_3_benchmark string,
+HAI_3_baseline string,
+HAI_3_performance string,
+HAI_3_achieve_pts string,
+HAI_3_improve_pts string,
+HAI_3_score string,
+HAI_4_threshold string,
+HAI_4_benchmark string,
+HAI_4_baseline string,
+HAI_4_performance string,
+HAI_4_achieve_pts string,
+HAI_4_improve_pts string,
+HAI_4_score string,
+HAI_5_threshold string,
+HAI_5_benchmark string,
+HAI_5_baseline string,
+HAI_5_performance string,
+HAI_5_achieve_pts string,
+HAI_5_improve_pts string,
+HAI_5_score string,
+HAI_6_threshold string,
+HAI_6_benchmark string,
+HAI_6_baseline string,
+HAI_6_performance string,
+HAI_6_achieve_pts string,
+HAI_6_improve_pts string,
+HAI_6_score string)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+"separatorChar" = ",",
+"quoteChar" = '"',
+"escapeChar" = '\\'
+)
+STORED AS TEXTFILE
+LOCATION '/user/w205/hospital_compare/safety';
