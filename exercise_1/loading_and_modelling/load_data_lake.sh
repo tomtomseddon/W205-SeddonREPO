@@ -64,6 +64,9 @@ NEW_FILE4="measures.csv"
 OLD_FILE5="hvbp_hcahps_11_10_2016.csv"
 NEW_FILE5="survey_responses.csv"
 
+OLD_FILE6="hvbp_safety_11_10_2016.csv"
+NEW_FILE6="safety.csv"
+
 # Then execute the copy and removal
 
 echo "processing $OLD_FILE1..."
@@ -81,6 +84,9 @@ tail -n +2 "$OLD_FILE4" > $NEW_FILE4
 echo "processing $OLD_FILE5..."
 tail -n +2 "$OLD_FILE5" > $NEW_FILE5
 
+echo "processing $OLD_FILE6..."
+tail -n +2 "$OLD_FILE6" > $NEW_FILE6
+
 # Now create the HDFS directories needed
 
 hdfs dfs -mkdir /user/w205/hospital_compare
@@ -89,6 +95,7 @@ hdfs dfs -mkdir /user/w205/hospital_compare/effective_care
 hdfs dfs -mkdir /user/w205/hospital_compare/readmissions
 hdfs dfs -mkdir /user/w205/hospital_compare/measures
 hdfs dfs -mkdir /user/w205/hospital_compare/survey_responses
+hdfs dfs -mkdir /user/w205/hospital_compare/safety
 
 # Put each of the new files into hdfs in the right directory
 
@@ -106,6 +113,9 @@ hdfs dfs -put $NEW_FILE4 /user/w205/hospital_compare/measures
 
 echo "adding $NEW_FILE5 to hdfs..."
 hdfs dfs -put $NEW_FILE5 /user/w205/hospital_compare/survey_responses
+
+echo "adding $NEW_FILE6 to hdfs..."
+hdfs dfs -put $NEW_FILE6 /user/w205/hospital_compare/safety
 
 # change directory back to original working directory when script started
 
