@@ -1,0 +1,90 @@
+MIDS W205 Exercise 1 Tom Seddon
+
+Best Hospitals
+--------------
+
+I identify ten hospitals that are a model of high quality care:
+
+ID      Name								  Overall	AMI		HF	   PN	PREG  IMM	 ER	  PSI_90
+
+050739	CENTINELA HOSPITAL MEDICAL CENTER	    12.66	10.5    7.1	  10.6	  0	  100	 68	   0.334
+050278	PROVIDENCE HOLY CROSS MEDICAL CENTER	10.97	12.1   10	  13.2	  1	   99	 31	   0.293
+050239	GLENDALE ADVENTIST MEDICAL CENTER	    10.47	12	    7.9	  12	  2	   99	 31	   0.4
+050481	WEST HILLS HOSPITAL & MEDICAL CENTER	10.42	12.8	8.7	  15.4	  0	  100	  5	   0.381
+330214	NYU HOSPITALS CENTER	                10.42	11.1	7.5	  10.7	  0	   99	 11	   0.56
+670055	METHODIST STONE OAK HOSPITAL        	10.18	13.4   11.3	  14	  2	  100	  4	   0.298
+360055	TRUMBULL MEMORIAL HOSPITAL              10.01	12.4	8.9	  12.9	  0	  100	 24	   0.41
+100034	MOUNT SINAI MEDICAL CENTER	             9.98	12.6	9.1	  9.8	  2	   98	 20	   0.435
+450617	CLEAR LAKE REGIONAL MEDICAL CENTER	     9.97	12.1   10.3	  12.8	  0	  100	  6	   0.434
+100167	PLANTATION GENERAL HOSPITAL	             9.73	12.1	9.8	  12.6	  2	   99	  7	   0.429
+
+
+Average score for the 1936 hospitals with		        14.1   12.0   16.4	  2	   95	 28	   0.578
+good data across all 7 procedures
+
+
+Approach
+--------
+
+1) Identified measures to represent 'procedures'
+
+I researched the existing 'Hospital Value Based Purchasing' measures used by Medicare.
+This suggested to me that a combination of outcome, process and safety measures would be
+appropriate to represent different types of 'procedures'.
+
+I then reviewed what proportion of hospitals had data for some of the main candidate
+procedures, as a lot of measures have only scant reporting, and some procedures are only
+done in a subset of hospitals.  For this exercise I decided it was more important to cast
+the net widely to include as many candidate hospitals as possible.
+
+I picked seven different measures to give a reasonable spread of types of procedures
+
+Outcomes
+AMI  - mortality rate (in 30 days) from Acute Myocardial Infarction
+HF   - mortality rate (in 30 days) from Heart Failure
+PN   - mortality rate (in 30 days) from Heart Failure
+
+Processes
+PREG   - % of mothers whose deliveries were scheduled too early unnecessarily
+IMM    - % of patients assessed and given flu vaccine
+ER     - median minutes spent in the ER before being seen by a physician
+
+Safety
+PSI_90 - aggregated measure of post surgical complication rate
+
+
+2) Screening out hospitals without valid measures on all
+
+I decided that because the goal was to identify hospitals who performed well across a 
+number of measures, I would screen out those which didn't have valid information across
+all seven.  This allows for a clean comparison among this group and I determined that
+1936 hospitals met this criteria, so felt that I still had enough hospitals to work with
+after the screening.
+
+
+3) Normalizing the measures
+
+Each of these measures has a different base rate and variability.  I decided to deal with
+this by normalizing the measures (in the statistical, rather than the database sense).
+
+For each measure, I calculated the mean and standard deviation of the score across the
+1936 observations.  I then took each hospital's score and calculated the difference from
+the mean, and divided that difference by the standard deviation.
+
+I calculated the difference to make a positive z-score be 'good' (which means lower than
+the mean for all scores except IMM, where higher that the mean is better).
+
+
+4) Creating a total score
+
+I decided that I wanted to weight the impact of outcomes, processes and safety evenly in
+my final scoring of hospitals.  Since I have three outcome and three process measures I 
+did this by calculating an Overall score that included a weighting factor of 3 for the 
+safety score, to achieve that.
+
+I then sorted the hospitals in descending order of overall rating as above.
+
+I included the raw scores for each of the measures, and a comparison to the overall mean
+scores for each of those measures, to show how each of these ten hospitals are better on
+almost all procedures, therefore I think the evidence supports that they represent models
+of high quality care.
