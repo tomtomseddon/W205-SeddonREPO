@@ -1,0 +1,33 @@
+MIDS W205 Exercise 1 Tom Seddon
+
+Best Hospitals
+--------------
+
+I identify ten states that are models of high quality care:
+
+State	Score	Hospitals
+OH      1.79    80                                                              
+IN	1.51	55
+VA	1.35	52
+FL	1.32	102
+CO	1.24	29
+MA	1.21	40
+TX	1.15	154
+MO	1.1	49
+KS	0.83	20
+MN	0.62	26
+
+
+Approach
+--------
+
+I used the normalized, weighted overall rating score that I'd previously calculated by hospital
+to create an average score for the hospitals in each state.
+
+I noticed that many of the extreme scores at the top and bottom of the table were coming
+from states with small numbers of hospitals, which is as expected given the smoothing effect
+of larger samples.
+
+I decided to set a minimum of 20 hospitals in a state to be able to compare it as as model
+of high quality care, and filtered the results accordingly, as shown above.
+

@@ -5,21 +5,21 @@ Best Hospitals
 
 I identify ten hospitals that are a model of high quality care:
 
-ID      Name								  Overall	AMI		HF	   PN	PREG  IMM	 ER	  PSI_90
+ID      Name					Overall	  AMI    HF    PN  PREG  IMM   ER   PSI_90
 
-050739	CENTINELA HOSPITAL MEDICAL CENTER	    12.66	10.5    7.1	  10.6	  0	  100	 68	   0.334
-050278	PROVIDENCE HOLY CROSS MEDICAL CENTER	10.97	12.1   10	  13.2	  1	   99	 31	   0.293
-050239	GLENDALE ADVENTIST MEDICAL CENTER	    10.47	12	    7.9	  12	  2	   99	 31	   0.4
-050481	WEST HILLS HOSPITAL & MEDICAL CENTER	10.42	12.8	8.7	  15.4	  0	  100	  5	   0.381
-330214	NYU HOSPITALS CENTER	                10.42	11.1	7.5	  10.7	  0	   99	 11	   0.56
-670055	METHODIST STONE OAK HOSPITAL        	10.18	13.4   11.3	  14	  2	  100	  4	   0.298
-360055	TRUMBULL MEMORIAL HOSPITAL              10.01	12.4	8.9	  12.9	  0	  100	 24	   0.41
-100034	MOUNT SINAI MEDICAL CENTER	             9.98	12.6	9.1	  9.8	  2	   98	 20	   0.435
-450617	CLEAR LAKE REGIONAL MEDICAL CENTER	     9.97	12.1   10.3	  12.8	  0	  100	  6	   0.434
-100167	PLANTATION GENERAL HOSPITAL	             9.73	12.1	9.8	  12.6	  2	   99	  7	   0.429
+050739	CENTINELA HOSPITAL MEDICAL CENTER       12.66    10.5    7.1  10.6  0    100   68   0.334
+050278	PROVIDENCE HOLY CROSS MEDICAL CENTER    10.97    12.1   10    13.2  1     99   31   0.293
+050239	GLENDALE ADVENTIST MEDICAL CENTER       10.47    12      7.9  12    2     99   31   0.4
+050481	WEST HILLS HOSPITAL & MEDICAL CENTER    10.42    12.8	 8.7  15.4  0    100    5   0.381
+330214	NYU HOSPITALS CENTER                    10.42    11.1	 7.5  10.7  0     99   11   0.56
+670055	METHODIST STONE OAK HOSPITAL            10.18    13.4   11.3  14    2    100    4   0.298
+360055	TRUMBULL MEMORIAL HOSPITAL              10.01    12.4	 8.9  12.9  0    100   24   0.41
+100034	MOUNT SINAI MEDICAL CENTER               9.98    12.6	 9.1   9.8  2     98   20   0.435
+450617	CLEAR LAKE REGIONAL MEDICAL CENTER       9.97    12.1   10.3  12.8  0    100    6   0.434
+100167	PLANTATION GENERAL HOSPITAL              9.73    12.1	 9.8  12.6  2     99    7   0.429
 
 
-Average score for the 1936 hospitals with		        14.1   12.0   16.4	  2	   95	 28	   0.578
+Average score for the 1936 hospitals with                14.1   12.0  16.4  2     95   28   0.578
 good data across all 7 procedures
 
 
