@@ -1,0 +1,28 @@
+MIDS W205 Exercise 1 Tom Seddon
+
+Most Variable Procedures
+------------------------
+
+Based on the standardized variation in their measures,
+I identify pregnancy care and ER wait times as the most
+variable procedures between hospitals of my seven measures.
+
+AMI	HF	PN	PREG	IMM	ER	PSI_90		
+0.09	0.13	0.134	1.798	0.059	0.587	0.251
+
+Approach
+--------
+
+I used the summarized mean and standard deviation scores for each procedure
+that I had previously calculated.
+
+Because the procedures have different measurement bases, I normalized the
+standard deviations by dividing each by the mean score for its measure.
+
+This gives a similar basis of comparison across measures to assess how
+large the variability is to the typical score for that measure.
+
+We can see above that the two largest scores are for the % of women who
+have delivery scheduled early incorrectly (the PREG column) and the median
+number of minutes patients wait before seeing a doctor in the ER (the ER)
+column.

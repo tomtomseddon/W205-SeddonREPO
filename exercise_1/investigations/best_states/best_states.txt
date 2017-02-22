@@ -1,6 +1,6 @@
 MIDS W205 Exercise 1 Tom Seddon
 
-Best Hospitals
+Best States
 --------------
 
 I identify ten states that are models of high quality care:
