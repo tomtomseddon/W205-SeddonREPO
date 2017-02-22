@@ -1,0 +1,58 @@
+MIDS W205 Exercise 1 Tom Seddon
+
+Link between Patient survey rating and other measures
+-----------------------------------------------------
+
+A.  Patient Survey rating vs Medicare overall VBP rating
+
+There does appear to be a general link between the survey scores
+reported by patients and the overall rating for the hospital 
+from the Medicare VBP rating (overall 1-5 rating).
+
+This can be seen in the table below which groups the hospitals
+by VBP rating and shows the corresponding average patient survey
+score for that group.  The Patient survey scores increase as the 
+VBP rating improves.
+
+VBP	Patient Hospital
+rating	Survey	Count
+5       81.36   79                                                              
+4	75.09	706
+3	70.07	1322
+2	64.8	635
+1	59.69	105
+
+Note:  Since patient survey is one component of the VBP rating
+some link between them is to be expected.
+
+B. Patient Survey rating vs Measure of Consistency
+
+There also seems to be a general tendency for hospitals with
+higher patient survey scores to perform better on the measure of
+consistent performance across seven different procedures that I 
+created.
+
+This can be seen in the table below which groups the hospitals
+by their patient survey rating group, and shows the average
+score on my total standardized achievement score.  Counts of 
+hospitals in each group are also shown.
+
+Patient
+Survey		Standardized    Hospital
+Rating Group	Achievement	Count
+9 out of 10     1.27   		14                                                      
+8 out of 10	2.31		29
+7 out of 10	1.51		59
+6 out of 10	1.08		76
+5 out of 10	1		120
+4 out of 10	0.09		141
+3 out of 10	0.68		159
+2 out of 10	0.36		203
+1 out of 10	-0.16		171
+0 out of 10	-0.59		953
+
+There is a general pattern that hospitals rated higher by patients
+have higher achievement on my standardized score.  It should be noted
+that I suppressed the Rating Group for "10 out of 10" as there were
+only 7 hospitals in it, making it less reliable, and I needed to limit
+the output to 10 rows, as per the instructions.
