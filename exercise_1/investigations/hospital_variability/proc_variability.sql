@@ -1,5 +1,13 @@
-DROP TABLE procedure_var;
+-- This script creates a standardized summary of the score variability for 
+-- each of the identified procedures.
 
+-- This was developed to run in SparkSQL.
+
+-- Note:  This assumes that the best_hospitals.sql script has already been run.
+
+
+-- Create the standardized view
+DROP TABLE procedure_var;
 CREATE TABLE procedure_var AS
 SELECT
   cast(sd_ami/avg_ami AS decimal(4,3)) ami_var,
@@ -12,3 +20,4 @@ SELECT
 FROM
   summary_variables
 ;
+
