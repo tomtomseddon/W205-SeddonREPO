@@ -18,7 +18,7 @@ VBP	Patient Hospital
 rating	Survey	Count
 5       81.36   79                                                              
 4	75.09	706
-3	70.07	1322
+3	70.08	1320
 2	64.8	635
 1	59.69	105
 
