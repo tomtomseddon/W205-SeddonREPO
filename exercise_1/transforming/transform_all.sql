@@ -1,7 +1,9 @@
--- Script to transform all the basic tables into the tables
--- in my ER diagram.
--- I filter out records without valid scores in the transformations
--- of all the seven 'procedures' and the survey.
+-- Script to transform basic schema into the tables in my ER diagram.
+
+-- Developed to run in SparkSQL.
+
+-- Note: Filters out records without valid scores in the
+-- transformations of all the seven 'procedures' and the survey.
 
 
 -- Hospitals
