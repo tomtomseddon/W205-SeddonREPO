@@ -140,7 +140,7 @@ FROM
 
 DROP TABLE topten_hosps;
 CREATE TABLE topten_hosps AS
-SELECT * FROM scored_hosps
+SELECT * FROM totalled_hosps
 ORDER BY z_total DESC
 LIMIT 10
 ;
