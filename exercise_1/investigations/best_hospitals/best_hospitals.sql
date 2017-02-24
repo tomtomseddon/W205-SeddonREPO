@@ -1,6 +1,7 @@
 -- This script creates a table of 10 which support my answer to which are 10
 -- hospitals that model consistently high quality care
 
+-- Script developed to run in SparkSQL.
 
 -- Combine the individual procedure measures into a single table
 

@@ -35,9 +35,13 @@ appropriate to represent different types of 'procedures'.
 I then reviewed what proportion of hospitals had data for some of the main candidate
 procedures, as a lot of measures have only scant reporting, and some procedures are only
 done in a subset of hospitals.  For this exercise I decided it was more important to cast
-the net widely to include as many candidate hospitals as possible.
+the net widely to include as many candidate hospitals as possible.  I also
+wanted to concentrate on a set of important procedures vs have a long list of
+minor one.
 
 I picked seven different measures to give a reasonable spread of types of procedures
+and to focus on procedures that the HVBP system had validated through their
+review process as being important enough to tie payment to. 
 
 Outcomes
 AMI  - mortality rate (in 30 days) from Acute Myocardial Infarction
@@ -58,7 +62,7 @@ PSI_90 - aggregated measure of post surgical complication rate
 I decided that because the goal was to identify hospitals who performed well across a 
 number of measures, I would screen out those which didn't have valid information across
 all seven.  This allows for a clean comparison among this group and I determined that
-1936 hospitals met this criteria, so felt that I still had enough hospitals to work with
+1932 hospitals met this criteria, so felt that I still had enough hospitals to work with
 after the screening.
 
 
@@ -68,11 +72,11 @@ Each of these measures has a different base rate and variability.  I decided to 
 this by normalizing the measures (in the statistical, rather than the database sense).
 
 For each measure, I calculated the mean and standard deviation of the score across the
-1936 observations.  I then took each hospital's score and calculated the difference from
+1932 observations.  I then took each hospital's score and calculated the difference from
 the mean, and divided that difference by the standard deviation.
 
 I calculated the difference to make a positive z-score be 'good' (which means lower than
-the mean for all scores except IMM, where higher that the mean is better).
+the mean for all scores except IMM, where higher than the mean is better).
 
 
 4) Creating a total score
