@@ -20,8 +20,9 @@ mkdir -p ~/staging
 if [[ ! -e ~/staging/exercise_1 ]]; then
    mkdir ~/staging/exercise_1
 else
-   echo "The exercise_1 folder already exists in staging.  Stopping script."
-   echo "Remove existing exercise_1 folder before rerunning this script."
+   printf "\nWarning: An exercise_1 folder already exists in staging."
+   printf "\nStopping script."
+   printf "\nRemove existing exercise_1 folder before rerunning this script.\n\n"
    exit
 fi
 
