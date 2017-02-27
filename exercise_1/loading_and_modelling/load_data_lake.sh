@@ -21,6 +21,7 @@ if [[ ! -e ~/staging/exercise_1 ]]; then
    mkdir ~/staging/exercise_1
 else
    echo "The exercise_1 folder already exists in staging.  Stopping script."
+   echo "Remove existing exercise_1 folder before rerunning this script."
    exit
 fi
 
