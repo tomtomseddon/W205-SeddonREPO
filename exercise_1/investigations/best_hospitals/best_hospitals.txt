@@ -18,9 +18,12 @@ ID      Name					Overall	  AMI    HF    PN  PREG  IMM   ER   PSI_90
 450617	CLEAR LAKE REGIONAL MEDICAL CENTER       9.97    12.1   10.3  12.8  0    100    6   0.434
 100167	PLANTATION GENERAL HOSPITAL              9.73    12.1	 9.8  12.6  2     99    7   0.429
 
+Source: topten_hosps table
 
 Average score for the 1936 hospitals with                14.1   12.0  16.4  2     96   29   0.578
 good data across all 7 procedures
+
+Source: summary_variables table
 
 
 Approach

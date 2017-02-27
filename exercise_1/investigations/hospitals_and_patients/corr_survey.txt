@@ -22,6 +22,8 @@ rating	Survey	Count
 2	64.8	635
 1	59.69	105
 
+Source: survey_hvbp table
+
 Note:  Since patient survey is one component of the VBP rating
 some link between them is to be expected.
 
@@ -50,6 +52,8 @@ Rating Group	Achievement	Count
 2 out of 10	0.36		203
 1 out of 10	-0.16		171
 0 out of 10	-0.59		953
+
+Source: survey_zrating table
 
 There is a general pattern that hospitals rated higher by patients
 have higher achievement on my standardized score.  It should be noted

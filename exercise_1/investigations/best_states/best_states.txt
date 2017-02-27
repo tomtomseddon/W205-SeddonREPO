@@ -17,6 +17,7 @@ MO	1.1	49
 KS	0.83	20
 MN	0.62	26
 
+Source: topten_states table
 
 Approach
 --------

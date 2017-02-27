@@ -10,6 +10,8 @@ variable procedures between hospitals of my seven measures.
 AMI	HF	PN	PREG	IMM	ER	PSI_90		
 0.09	0.13	0.134	1.799	0.059	0.586	0.251
 
+Source: procedure_var table
+
 Approach
 --------
 
