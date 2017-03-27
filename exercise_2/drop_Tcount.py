@@ -1,6 +1,6 @@
-# Test basic psycopg functionality
-
-# Sample code snippets for working with psycopg
+# Convenient script to remove the database that stores words and counts from the Tweet
+# streaming processing topology
+# MIDS W205 Exercise 2 Tom Seddon March 27 2017
 
 
 import psycopg2
@@ -15,9 +15,11 @@ try:
     # DROP DATABASE can't run inside a transaction
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = conn.cursor()
-    cur.execute("DROP DATABASE test_db")
+    cur.execute('DROP DATABASE "Tcount"')
     cur.close()
     conn.close()
 except:
-    print "Could not drop test_db"
+    print "Could not drop Tcount"
 
+# close connection at the end
+conn.close()
