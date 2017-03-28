@@ -6,6 +6,8 @@
 #
 # If a word is passed as an argument, it will only return the number of occurences of that word
 #
+# Assumes table of results and word to search for ARE case-sensitive.
+#
 # MIDS W205 Exercise 2 Tom Seddon March 27 2017
 
 
@@ -13,21 +15,14 @@ import psycopg2
 import sys
 from operator import itemgetter
 
-print "Program arguments", sys.argv
-
+# Check whether an optional argument was passed
 if len(sys.argv) == 1:
     show_all = True
 else:
     show_all = False
     single_word = sys.argv[1]
 
-print "Show all?", show_all
-
-if not show_all:
-    print "Single word: ", single_word
-
-#Connecting to Tcount
-
+# Connect to Tcount database and get either all results or just for single word
 conn = psycopg2.connect(database="Tcount", user="postgres", password="pass", host="localhost", port="5432")
 
 if show_all:
@@ -39,24 +34,18 @@ else:
         curs.execute('SELECT word, count FROM "Tweetwordcount" WHERE word=%s', (single_word,))
         records = curs.fetchall()
         if curs.rowcount == 0:
-            no_match = True
+            count = 0
         else:
-            no_match = False
+            count = records[0][1]
 
-# have to sort the tuples by lower otherwise get uppercase and lowercase sorted separately
-
-records.sort(key = lambda x: x[0].lower())
-
+# Display results
 if show_all:
+    # sort the tuples by alphabetical order (uppercase and lowercase together)
+    records.sort(key = lambda x: x[0].lower())
     for rec in records:
         print rec[0], rec[1]
 else:
-    if no_match:
-        count = 0
-    else:
-        count  = records[0][1]
     print "Total number of occurences of", single_word, ":", count
-
 
 # Close connection at the end
 conn.close()
